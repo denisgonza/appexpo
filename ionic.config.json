@@ -1,0 +1,7 @@
+{
+  "name": "appexpo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
