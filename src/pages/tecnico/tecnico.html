@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Técnico
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #f5f5f5">
+  <ion-segment [(ngModel)]="seleccion">
+    <ion-segment-button value="grupo1">TIC</ion-segment-button>
+    <ion-segment-button value="grupo2">Mecatrónica</ion-segment-button>
+    <ion-segment-button value="grupo3">Diseño</ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="seleccion == 'grupo1'">
+    <ion-card>
+      <ion-card-header style="text-align: center">
+        Tecnico Superior en TIC
+      </ion-card-header>
+      <ion-card-content>
+          <img [src]="'assets/imgs/tic.jpg'"><br>
+        Tecnología de la Información y Comunicación (TIC) es una de las carreras del tecnico superior que ofrece el Centro Tecnológico de Avanzada Paraguay-Corea.<br>
+        Esta carrera tiene una duración de 2 años, en la cual el 80% del contenido de la carrera es practica y tan solo un 20% trata de teoria , ademas, para finalizar la carrera, los alumnos realizaran un proyecto final, en el cual, deberan poner 
+        en práctica todo lo aprendido y desarrollar un sistema. El objetivo es lograr crear profesionales
+        de calidad y estos puedan ser introducidos en el mundo laboral, introduciendo a estos en pasantias laborales al culminar la carrera.
+      </ion-card-content>
+    </ion-card>
+    
+    
+  </div>
+  <div *ngIf="seleccion == 'grupo2'">
+      <ion-card>
+          <ion-card-header style="text-align: center">
+            Tecnico Superior en <br>
+            Mecatrónica
+          </ion-card-header>
+          <ion-card-content>
+              <img [src]="'assets/imgs/meca1.jpg'"><br>
+            Mecatrónica es una de las carreras del tecnico superior que ofrece el Centro Tecnológico de Avanzada Paraguay-Corea.<br>
+            Esta carrera tiene una duración de 2 años, en la cual el 80% del contenido de la carrera es practica y tan solo un 20% trata de teoria. El objetivo es lograr crear profesionales
+            de calidad y estos puedan ser introducidos en el mundo laboral, introduciendo a estos en pasantias laborales al culminar la carrera.
+          </ion-card-content>
+        </ion-card>
+  </div>
+  <div *ngIf="seleccion == 'grupo3'">
+      <ion-card>
+          <ion-card-header style="text-align: center">
+            Tecnico Superior en Diseño <br>
+            de Modas
+          </ion-card-header>
+          <ion-card-content>
+              <img [src]="'assets/imgs/diseño1.jpg'"><br>
+            Diseño de modas es una de las carreras del tecnico superior que ofrece el Centro Tecnológico de Avanzada Paraguay-Corea.<br>
+            Esta carrera tiene una duración de 2 años, en la cual el 80% del contenido de la carrera es practica y tan solo un 20% trata de teoria. El objetivo es lograr crear profesionales
+            de calidad y estos puedan ser introducidos en el mundo laboral, introduciendo a estos en pasantias laborales al culminar la carrera.
+          </ion-card-content>
+        </ion-card>
+  </div>
+</ion-content>

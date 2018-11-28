@@ -1,11 +1,35 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Logeo
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content style="background-color: #f5f5f5">
+  <h2 style="text-align: center">Contacto</h2>
+  <form #miformulario = "ngForm" (ngSubmit)="enviarForm(miformulario)">
+    <ion-list>
+      <ion-list-header>Formulario</ion-list-header>
+      <ion-item>
+        <ion-label fixed>Nombre:</ion-label>
+        <ion-input type="text" [(ngModel)]="contacto.nombre" name="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Apellido:</ion-label>
+        <ion-input type="string" [(ngModel)]="contacto.apellido" name="apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Telefono:</ion-label>
+          <ion-input type="string" [(ngModel)]="contacto.telefonos" name="telefonos"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Correo:</ion-label>
+            <ion-input type="string" [(ngModel)]="contacto.correos" name="correos"></ion-input>
+          </ion-item>
+      <ion-item>
+        <button ion-button block type="submit" (click)="showAlert()">Enviar</button>
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>

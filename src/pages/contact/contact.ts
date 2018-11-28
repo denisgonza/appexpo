@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ElementoPage } from '../elemento/elemento';
 
 @Component({
   selector: 'page-contact',
@@ -7,8 +8,10 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController) {}
+    agregarPagina() {
+      this.navCtrl.push(ElementoPage);
+    }
+  
 
 }

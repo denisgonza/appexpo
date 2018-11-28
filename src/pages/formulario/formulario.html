@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ajustes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item-divider>General</ion-item-divider>
+  <ion-item-group>
+    <ion-item *ngFor="let item of lista" text-left>
+      <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'"></ion-avatar>
+      <ion-label>{{item.titulo}}</ion-label>
+      <ion-toggle color="primary"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

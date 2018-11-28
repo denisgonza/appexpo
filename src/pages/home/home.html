@@ -1,17 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="Default">
+    <!--ion-buttons-- start>
+      <button ion-button icon-only><ion-icon name="md-rainy"></ion-icon> </button>
+    </ion-buttons-->
+    <ion-title>Inicio</ion-title>
+    <!--ion-buttons end>
+      <button ion-button icon-only><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons-->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding style="background-image: url(assets/imgs/cta.jpg)">
+  <ion-grid>
+    <ion-list>
+      <ion-list-header style="background-color: #205c9a; color: white;border: #205c9a;">Novedades</ion-list-header>
+
+      <ion-item-divider style="background-color: #205c9a; color: white;border: #205c9a">Cursos Disponibles</ion-item-divider>
+      <ion-item-group>
+        <ion-item *ngFor="let item of lista" text-left detail-push color="gris">
+          <ion-thumbnail item-left><img [src]="'assets/thumbnails/thumb_'+item.id+'.png'"></ion-thumbnail>
+          <h3>{{item.titulo}}</h3>
+        </ion-item>
+      </ion-item-group>
+     </ion-list>
+  </ion-grid>
+  <!--ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block color="danger">Diseño</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block color="light">Mecatronica</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block>Tic</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid-->
 </ion-content>

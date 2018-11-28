@@ -1,17 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Contacto
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+<ion-content padding style="background-image: url(assets/imgs/frente.jpg); background-size: cover">
+  <ion-card style="opacity: 0.9;">
+    <ion-card-header text-center>
+      <h1> CTA Paraguay-Corea</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="'assets/imgs/cta-logo.jpg'">
+    </ion-card-content>
+    <ion-card-title text-center>Centro Tecnológico de Avanzada</ion-card-title>
+    <button ion-button (click)="agregarPagina()">info</button>
+  </ion-card>
 </ion-content>
